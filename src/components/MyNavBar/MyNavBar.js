@@ -12,9 +12,33 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import "./MyNavBar.css"
 import { Link } from 'react-router-dom';
 import { Link as LinkBase } from '@mui/material';
 import { useSelector, shallowEqual } from 'react-redux';
+import { createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
+
+
+// Custom Color Codes Object
+
+const stulzcolors = {
+    black: "#141414",
+    red: "#8f3422",
+    white: "#f9f9f9"
+}
+
+
+// create custom Theme with customer colors
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: stulzcolors.red
+        }
+    },
+  });
+
 
 
 // Navbar Code from MUI modified for my needs
@@ -34,13 +58,13 @@ function MyNavBar(props) {
   };
 
   // define style object for conditional Drawer sx
-  const drawer1 = { textAlign: 'center', color: "white", backgroundColor: "black" }
-  const drawer2 = { textAlign: 'center', color: "black", backgroundColor: "white" }
-  const linkbase1 = { color: "black", width: "100%" }
-  const linkbase2 = { color: "white", width: "100%" }
+  const drawer1 = { textAlign: 'center', color: stulzcolors.white, backgroundColor: stulzcolors.black }
+  const drawer2 = { textAlign: 'center', color: stulzcolors.black, backgroundColor: stulzcolors.white }
+  const linkbase1 = { color: stulzcolors.black, width: "100%" }
+  const linkbase2 = { color: stulzcolors.white, width: "100%" }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={(page === "Media" || page === "Coops" || page === "Live") ? drawer2 : drawer1}>
+    <Box onClick={handleDrawerToggle} sx={(page === "video") ? drawer2 : drawer1}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Stulz
       </Typography>
@@ -49,7 +73,7 @@ function MyNavBar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <LinkBase component={Link} to={`/${item.toLowerCase()}`} sx={(page == "Media" || page == "Coops" || page == "Live") ? linkbase1 : linkbase2} underline="none">
+              <LinkBase component={Link} to={`/${item.toLowerCase()}`} sx={(page == "video") ? linkbase1 : linkbase2} underline="none">
                 {item}
               </LinkBase>
             </ListItemButton>
@@ -57,7 +81,7 @@ function MyNavBar(props) {
         ))}
         <ListItem key="Media" disablePadding>
           <ListItemButton sx={{ textAlign: 'center' }}>
-            <LinkBase component={Link} to={`/video`} sx={(page == "Media" || page == "Coops" || page == "Live") ? linkbase1 : linkbase2} underline="none">
+            <LinkBase component={Link} to={`/video`} sx={(page == "video") ? linkbase1 : linkbase2} underline="none">
               Media
             </LinkBase>
           </ListItemButton>
@@ -70,6 +94,7 @@ function MyNavBar(props) {
 
   if (page != "video") {
     return (
+        <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex' }}>
         <AppBar component="nav">
           <Toolbar sx={{ backgroundColor: "#141414", }}>
@@ -91,7 +116,7 @@ function MyNavBar(props) {
             </Box>
             <Box sx={{ width: "20vw" }}>
               <LinkBase component={Link} to={`/video`} sx={{ color: "white", display: "block", width: "100%", height: "100%" }} underline="none">
-                <Button variant="outlined" sx={{ display: { xs: 'none', sm: 'block', md: "block", lg: "block", xl: "block" }, color: 'white', borderStyle: "solid", borderColor: "#8f3422", marginLeft: "10vw" }}>
+                <Button variant="outlined" sx={{ display: { xs: 'none', sm: 'block', md: "block", lg: "block", xl: "block" }, color: 'white', borderStyle: "solid", borderColor: stulzcolors.white, marginLeft: "10vw" }}>
                  Video/Fil
                 </Button>
               </LinkBase>
@@ -117,9 +142,11 @@ function MyNavBar(props) {
         </nav>
         <Toolbar />
       </Box>
+      </ThemeProvider>
     );
   }
   else return (
+    <ThemeProvider theme={theme}>
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav">
         <Toolbar sx={{ backgroundColor: "#f9f9f9", }}>
@@ -141,7 +168,7 @@ function MyNavBar(props) {
           </Box>
           <Box sx={{ width: "20vw" }}>
             <LinkBase component={Link} to={`/video`} sx={{ color: "white", display: "block", width: "100%", height: "100%" }} underline="none">
-              <Button variant="outlined" sx={{ display: { xs: 'none', sm: 'block', md: "block", lg: "block", xl: "block" }, color: 'black', borderStyle: "solid", borderColor: "#8f3422", marginLeft: "10vw" }}>
+              <Button variant="outlined" sx={{ display: { xs: 'none', sm: 'block', md: "block", lg: "block", xl: "block" }, color: 'black', borderStyle: "solid", borderColor: stulzcolors.black, marginLeft: "10vw" }}>
                 Video/Fil
               </Button>
             </LinkBase>
@@ -167,6 +194,7 @@ function MyNavBar(props) {
       </nav>
       <Toolbar />
     </Box>
+    </ThemeProvider>
 
   )
 }
