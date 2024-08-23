@@ -1,0 +1,9 @@
+.live {
+    width: 100vw;
+    height:100vh;
+    background: url('../../../public/images/live.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+  
+}

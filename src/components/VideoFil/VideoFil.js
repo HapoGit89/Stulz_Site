@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changePage } from "../../actions";
+import './VideoFil.css'
 
 
 const VideoFil = () => {
@@ -11,9 +12,7 @@ const VideoFil = () => {
       }, []);
     return (
         <>
-        <div className="Main">
-        <h1>This is Video</h1>
-        <h2>What color is the Navbar? Does it change for a particular Tab?</h2>
+        <div className="video">
         </div>
         </>
     )

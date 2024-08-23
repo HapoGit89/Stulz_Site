@@ -1,0 +1,9 @@
+.kontakt {
+    width: 100vw;
+    height:100vh;
+    background: url('../../../public/images/kontakt.JPG');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+  
+}

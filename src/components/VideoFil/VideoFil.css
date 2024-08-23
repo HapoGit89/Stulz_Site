@@ -1,0 +1,9 @@
+.video {
+    width: 100vw;
+    height:100vh;
+    background: url('../../../public/images/videofil.JPG');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+  
+}
