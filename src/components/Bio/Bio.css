@@ -1,0 +1,8 @@
+.bio {
+    width: 100vw;
+    height:100vh;
+    background: url('../../../public/images/bio.jpg');
+    background-size: cover;
+    background-position: center;
+  
+}

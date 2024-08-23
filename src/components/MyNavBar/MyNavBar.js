@@ -95,7 +95,7 @@ function MyNavBar(props) {
   if (page != "video") {
     return (
         <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', m: -1.9}}>
         <AppBar component="nav">
           <Toolbar sx={{ backgroundColor: "#141414", }}>
             <IconButton
@@ -147,7 +147,7 @@ function MyNavBar(props) {
   }
   else return (
     <ThemeProvider theme={theme}>
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' , m: -1.9}}>
       <AppBar component="nav">
         <Toolbar sx={{ backgroundColor: "#f9f9f9", }}>
           <IconButton
