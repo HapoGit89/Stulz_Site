@@ -18,6 +18,7 @@ import { Link as LinkBase } from '@mui/material';
 import { useSelector, shallowEqual } from 'react-redux';
 import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material';
+import LanguageChanger from '../LanguageChanger/LanguageChanger';
 
 
 // Custom Color Codes Object
@@ -112,15 +113,16 @@ function MyNavBar(props) {
                 <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "white" }} underline="none">
                   <Button key={item} sx={{ color: '#fff' }}>{item}</Button>
                 </LinkBase>
-              ))}
+                
+              ))
+              }
+               <LinkBase  component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
+              <Button variant="outlined"  sx={{ color: stulzcolors.white, borderColor: stulzcolors.white }}>Video/Film</Button>
+            </LinkBase>
             </Box>
-            <Box sx={{ width: "20vw" }}>
-              <LinkBase component={Link} to={`/video`} sx={{ color: "white", display: "block", width: "100%", height: "100%" }} underline="none">
-                <Button variant="outlined" sx={{ display: { xs: 'none', sm: 'block', md: "block", lg: "block", xl: "block" }, color: 'white', borderStyle: "solid", borderColor: stulzcolors.white, marginLeft: "10vw" }}>
-                 Video/Fil
-                </Button>
-              </LinkBase>
-            </Box>
+            <Box sx={{ml: 7}}>
+          <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
+          </Box>
           </Toolbar>
         </AppBar>
         <nav>
@@ -165,13 +167,12 @@ function MyNavBar(props) {
                 <Button key={item} sx={{ color: "black" }}>{item}</Button>
               </LinkBase>
             ))}
-          </Box>
-          <Box sx={{ width: "20vw" }}>
-            <LinkBase component={Link} to={`/video`} sx={{ color: "white", display: "block", width: "100%", height: "100%" }} underline="none">
-              <Button variant="outlined" sx={{ display: { xs: 'none', sm: 'block', md: "block", lg: "block", xl: "block" }, color: 'black', borderStyle: "solid", borderColor: stulzcolors.black, marginLeft: "10vw" }}>
-                Video/Fil
-              </Button>
+              <LinkBase  component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
+              <Button variant="outlined" sx={{ color: stulzcolors.black, borderColor: stulzcolors.black }}>Video/Film</Button>
             </LinkBase>
+          </Box>
+            <Box sx={{ml: 7}}>
+          <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
           </Box>
         </Toolbar>
       </AppBar>

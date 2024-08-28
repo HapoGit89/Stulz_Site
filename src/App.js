@@ -9,12 +9,29 @@ import Kooperationen from './components/Kooperationen/Kooperationen';
 import Kontakt from './components/Kontakt/Kontakt';
 import { Routes, Route } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
+import LanguageContext from './context/languageContext';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [lang, setLang] = useState("ENG")  // state holds language choice
+
+  useEffect(function getLang(){
+    // if language info is in localStorage, get it and update state
+        if (localStorage.getItem("lang")){
+            setLang(localStorage.getItem("lang"))
+        }
+  },[])
+
+    // language change function gets triggered by LanguageChanger component
+    const changeLang = (l) => {
+      localStorage.setItem("lang", l)
+       setLang(l)
+     }
   return (
     <div className="App">
       <CssBaseline/>
-      <MyNavBar></MyNavBar>
+      <LanguageContext.Provider value={lang}>
+      <MyNavBar changeLang = {changeLang} ></MyNavBar>
       <Routes>
       <Route exact path="/video" element={<VideoFil></VideoFil>}></Route>+
       <Route exact path="/bio" element={<Bio></Bio>}></Route>
@@ -23,6 +40,7 @@ function App() {
       <Route exact path="/kooperationen" element={<Kooperationen></Kooperationen>}></Route>
       <Route exact path="/kontakt" element={<Kontakt></Kontakt>}></Route>
       </Routes>
+      </LanguageContext.Provider>
     </div>
   );
 }
