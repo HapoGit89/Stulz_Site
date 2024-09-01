@@ -9,7 +9,7 @@ import Kooperationen from './components/Kooperationen/Kooperationen';
 import Kontakt from './components/Kontakt/Kontakt';
 import { Routes, Route } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
-import LanguageContext from './context/languageContext';
+import LanguageContext from './languageContext';
 import { useState, useEffect } from 'react';
 
 function App() {

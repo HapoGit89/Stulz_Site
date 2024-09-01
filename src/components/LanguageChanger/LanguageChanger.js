@@ -1,7 +1,7 @@
 import { Button } from "reactstrap"
 import "./LanguageChanger.css"
 import { useContext } from "react"
-import LanguageContext from "../../context/languageContext"
+import LanguageContext from "../../languageContext"
 
 
 const LanguageChanger = ({changeLang}) => {

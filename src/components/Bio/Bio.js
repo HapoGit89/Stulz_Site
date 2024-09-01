@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changePage } from "../../actions";
 import './Bio.css'
+import { Divider, Stack, Typography, Box, Chip, Card} from "@mui/material";
+
 
 
 
@@ -12,10 +14,19 @@ const Bio = () => {
         dispatch(changePage("bio"))
       }, []);
     return (
-       
         <div className="bio">
+            <div className="blur">
+            <div className="bioCard">
+               <div className="text">
+                <h1>Hello There</h1>
+                <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+               </div>
+               <div className="imageBox">
+               <img src='/images/bio_small.jpg'></img>
+            </div>
         </div>
-     
+        </div>
+        </div>
     )
 }
 
