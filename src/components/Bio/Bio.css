@@ -1,37 +1,50 @@
 .bio {
     width: 100vw;
-    height:100vh;
+    height:100%;
     background: url('../../../public/images/bio.jpg');
-    background-size: cover;
+    background-size:cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;   
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     
 }
 
 .bioCard {
  
-    width: 80vw;
+    width: 100em;
     height: 40vh;
     display:flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-top: 20vh;
+}
+.bioContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .text {
     background: #f9f9f9;
     width: 50%;
     height: 100%;
+    padding-left:  2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
-img {
-    width: auto;
-    height: 40vh;
+.cardImage {
+    width: 30em;
+    height: auto;
 }
 
 .blur {
@@ -43,5 +56,29 @@ img {
     align-items: center;
     justify-content: center;
 }
+
+.imageCard {
+    width: 100em;
+    height: 40vh;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+
+}
+
+.boxImage {
+    width: 35em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em;
+
+}
+
 
 
