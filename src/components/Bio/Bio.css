@@ -7,20 +7,23 @@
     background-attachment: fixed;
     display: flex;   
     flex-direction: column;
+    
 
     
 }
 
 .bioCard {
  
-    width: 100em;
+    width: 80rem;
     height: 40vh;
     display:flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
     margin-top: 20vh;
+    background-color: blue;
+    
 }
 .bioContent {
     display: flex;
@@ -31,7 +34,7 @@
 
 .text {
     background: #f9f9f9;
-    width: 50%;
+    width: 60em;
     height: 100%;
     padding-left:  2%;
     padding-right: 2%;
@@ -43,7 +46,7 @@
 }
 
 .cardImage {
-    width: 30em;
+    width: 40em;
     height: auto;
 }
 
@@ -58,26 +61,40 @@
 }
 
 .imageCard {
-    width: 100em;
+    width: 80rem;
     height: 40vh;
     display:flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
     margin-top: 20vh;
     margin-bottom: 20vh;
+   
 
 }
 
 .boxImage {
-    width: 35em;
+    width: 40em;
     height: auto;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 2em;
+    justify-content: center; */
+}
 
+.imageBox {
+    width: 50em;
+}
+
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.8;
+    letter-spacing: 1px;
 }
 
 
