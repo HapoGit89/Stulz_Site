@@ -4,6 +4,16 @@
     background: url('../../../public/images/live.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(4px);
+   
   
+}
+
+.blur {
+    height:100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

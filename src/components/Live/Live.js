@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changePage } from "../../actions";
+import ConcertList from "../ConcertList/ConcertList";
 import './Live.css'
 
 
@@ -14,6 +15,9 @@ const Live = () => {
     return (
        
         <div className="live">
+            <div className="blur">
+            <ConcertList></ConcertList>
+            </div>
         </div>
      
     )
