@@ -16,6 +16,9 @@ const Live = () => {
        
         <div className="live">
             <div className="blur">
+                <div>
+                    <h1>Live</h1>
+                </div>
             <ConcertList></ConcertList>
             </div>
         </div>
