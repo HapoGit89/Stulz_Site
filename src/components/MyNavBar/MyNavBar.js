@@ -30,18 +30,6 @@ const stulzcolors = {
 }
 
 
-// create custom Theme with customer colors
-
-const theme = createTheme({
-    palette: {
-      primary: {
-        main: stulzcolors.red
-        }
-    },
-  });
-
-
-
 // Navbar Code from MUI modified for my needs
 
 const drawerWidth = 240;
@@ -95,7 +83,6 @@ function MyNavBar(props) {
 
   if (page != "video") {
     return (
-        <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex', m: -1.9}}>
         <AppBar component="nav">
           <Toolbar sx={{ backgroundColor: "#141414", }}>
@@ -110,14 +97,13 @@ function MyNavBar(props) {
             </IconButton>
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: "flex", lg: "flex", xl: "flex" }, justifyContent: "space-between", width: "80vw" }}>
               {navItems.map((item) => (
-                <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "white" }} underline="none">
-                  <Button key={item} sx={{ color: '#fff' }}>{item}</Button>
+                <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "white"} } underline="none">
+                  <Button key={item} sx={[{ color: stulzcolors.white }, {"&:hover": {color: "primary.main"}}]}>{item}</Button>
                 </LinkBase>
-                
               ))
               }
                <LinkBase  component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
-              <Button variant="outlined"  sx={{ color: stulzcolors.white, borderColor: stulzcolors.white }}>Video/Film</Button>
+              <Button variant="outlined"  sx={[{ color: stulzcolors.white, borderColor: stulzcolors.white },{"&:hover": {color: "primary.main"}}]}>Video/Film</Button>
             </LinkBase>
             </Box>
             <Box sx={{ml: 7}}>
@@ -144,11 +130,10 @@ function MyNavBar(props) {
         </nav>
         <Toolbar />
       </Box>
-      </ThemeProvider>
     );
   }
   else return (
-    <ThemeProvider theme={theme}>
+
     <Box sx={{ display: 'flex' , m: -1.9}}>
       <AppBar component="nav">
         <Toolbar sx={{ backgroundColor: "#f9f9f9", }}>
@@ -164,11 +149,11 @@ function MyNavBar(props) {
           <Box sx={{ display: { xs: 'none', sm: 'flex', md: "flex", lg: "flex", xl: "flex" }, justifyContent: "space-between", width: "80vw" }}>
             {navItems.map((item) => (
               <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "black" }} underline="none">
-                <Button key={item} sx={{ color: "black" }}>{item}</Button>
+                <Button key={item} sx={[{ color: "black" }, {"&:hover": {color: "primary.main"}}]}>{item}</Button>
               </LinkBase>
             ))}
               <LinkBase  component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
-              <Button variant="outlined" sx={{ color: stulzcolors.black, borderColor: stulzcolors.black }}>Video/Film</Button>
+              <Button variant="outlined" sx={[{ color: stulzcolors.black, borderColor: stulzcolors.black }, {"&:hover": {color: "primary.main"}}]}>Video/Film</Button>
             </LinkBase>
           </Box>
             <Box sx={{ml: 7}}>
@@ -195,7 +180,7 @@ function MyNavBar(props) {
       </nav>
       <Toolbar />
     </Box>
-    </ThemeProvider>
+   
 
   )
 }

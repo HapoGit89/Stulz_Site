@@ -8,9 +8,26 @@ import Recording from './components/Recording/Recording';
 import Kooperationen from './components/Kooperationen/Kooperationen';
 import Kontakt from './components/Kontakt/Kontakt';
 import { Routes, Route } from 'react-router-dom';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import LanguageContext from './languageContext';
 import { useState, useEffect } from 'react';
+
+
+// create MUI Theme with customer colors
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#8f3422",
+      light: "#8f342290"
+      },
+      secondary: {
+      main: "#141414",
+      light: "#14141490"
+
+      }
+  },
+});
+
 
 function App() {
   const [lang, setLang] = useState("ENG")  // state holds language choice
@@ -29,6 +46,7 @@ function App() {
      }
   return (
     <div className="App">
+      <ThemeProvider theme={theme}>
       <CssBaseline/>
       <LanguageContext.Provider value={lang}>
       <MyNavBar changeLang = {changeLang} ></MyNavBar>
@@ -41,6 +59,7 @@ function App() {
       <Route exact path="/kontakt" element={<Kontakt></Kontakt>}></Route>
       </Routes>
       </LanguageContext.Provider>
+      </ThemeProvider>
     </div>
   );
 }

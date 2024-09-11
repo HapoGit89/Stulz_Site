@@ -40,7 +40,7 @@ const ConcertList = () => {
                         <TableRow >
                             <TableCell sx={{fontWeight: 'bold', color:stulzcolors.white}}>Datum</TableCell>
                             <TableCell sx={{fontWeight: 'bold', color:stulzcolors.white}} >Location</TableCell>
-                            <TableCell sx={{fontWeight: 'bold', color:stulzcolors.white}} align="right" >Artist</TableCell>
+                            <TableCell sx={{fontWeight: 'bold', color:stulzcolors.white}} align="center" >Artist</TableCell>
                        
                         </TableRow>
                     </TableHead>
@@ -54,7 +54,7 @@ const ConcertList = () => {
                                     {row.date}
                                 </TableCell>
                                 <TableCell sx={{color: stulzcolors.white}} >{row.location}</TableCell>
-                                <TableCell align="right" sx={{color: stulzcolors.white}}>{row.artist}</TableCell>
+                                <TableCell align="center" sx={{color: stulzcolors.white}}>{row.artist}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
