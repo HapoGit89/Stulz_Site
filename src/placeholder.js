@@ -1,0 +1,2 @@
+export const exampleTexts = {ENG: "Hello, this is  a placeholder text, waiting for whats to come. It could have been very creative but its just another placeholder text.Better then lorem ipsum I hope. Anyway, consider this place held",
+    GER: "Hallo, das ist ein Platzhalter Text, der nur darauf wartet von einem richtig schönen Text ersetzt zu werden. Er ist noch nichtmal besonders kreativ, eher halt ein Platzhalter. Besser als Lorem Ipsum denke ich trotzdem. Naja, dieser Platz wird gehalten "}
