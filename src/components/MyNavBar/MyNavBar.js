@@ -19,6 +19,8 @@ import { useSelector, shallowEqual } from 'react-redux';
 import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material';
 import LanguageChanger from '../LanguageChanger/LanguageChanger';
+import { useContext } from 'react';
+import LanguageContext from '../../languageContext';
 
 
 // Custom Color Codes Object
@@ -38,6 +40,10 @@ const navItems = ['Bio', 'Live', 'Recording', 'Kooperationen', 'Kontakt'];
 function MyNavBar(props) {
   // get page from Redux store
   const page = useSelector(store => store.page, shallowEqual)
+  const lang = useContext(LanguageContext)
+  let navItems = []
+
+  lang == "GER" ? navItems = ['Bio', 'Live', 'Recording', 'Kooperationen', 'Kontakt'] : navItems = ['About', 'Live', 'Recording', 'Endorsements', 'Contact'];
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
