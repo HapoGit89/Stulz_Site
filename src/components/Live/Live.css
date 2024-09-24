@@ -1,13 +1,15 @@
 .live {
     width: 100vw;
-    height:100vh;
+    height:100%;
     background: url('../../../public/images/live.jpg');
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-    display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-  
+    background-attachment: fixed;
+    display: flex;   
+    flex-direction: column;
+    
+
+
 }
 
 .blur {
@@ -18,13 +20,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -20vh;
+    flex: 1;
+    overflow: auto;
 }
 
+.livecontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: -9vh;
+}
 
-h1{
-    letter-spacing: 5px;
-    font-size: 5rem;
-    color: #f9f9f990;
+.title {
+    margin: 5vh;
+    letter-spacing: 8px;
+    color: #f9f9f999;
+    font-size: 11vh;
     font-weight: lighter;
 }
+
+
+
+
+
+

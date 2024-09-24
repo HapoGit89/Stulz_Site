@@ -14,15 +14,17 @@ const Live = () => {
       }, []);
     return (
        
+    
         <div className="live">
-            <div className="blur">
-                <div>
-                    <h1>Live</h1>
-                </div>
-            <ConcertList></ConcertList>
+        <div className="blur">
+            <div className="livecontent">
+                <div className="title">Live</div>
+
+          <ConcertList></ConcertList>
             </div>
+           
         </div>
-     
+    </div>
     )
 }
 
