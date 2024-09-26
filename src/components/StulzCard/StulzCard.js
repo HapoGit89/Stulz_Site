@@ -15,7 +15,7 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
     if (theme == "light"){
     return (
         
-        <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.7, height: 0.35}, {backgroundColor: "#f9f9f9"}]} >
+        <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.6, height: 0.35}, {backgroundColor: "#f9f9f9"}]} >
           <CardMedia
             component="img"
             image={src}
@@ -23,10 +23,10 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
             style={{width: "50%"}}
           />
           <CardContent sx={[{width: 0.5}]}>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography align="left" gutterBottom variant="h5" component="div">
               {title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography align="left" variant="body2" color="text.secondary">
             {text}
             </Typography>
           </CardContent>
@@ -37,18 +37,18 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
     }
   else {
     return (
-      <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.7, height: 0.35}, {backgroundColor: "#141414"}]} >
+      <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.6, height: 0.35}, {backgroundColor: "#141414"}]} >
       <CardMedia
         component="img"
         image={src}
         alt={alt}
         style={{width: "40%"}}
       />
-      <CardContent sx={[{width: 0.6}]}>
-        <Typography sx={{color: "#f9f9f9"}} gutterBottom variant="h5" component="div">
+      <CardContent sx={[{width: 0.6}, {padding: 3.5}]}>
+        <Typography align="left" sx={{color: "#f9f9f9"}} gutterBottom variant="h3" component="div">
           {title}
         </Typography>
-        <Typography sx={{color: "#f9f9f9"}} variant="body2" color="text.secondary">
+        <Typography align="left" sx={{color: "#f9f9f9"}} variant="body2" color="text.secondary">
         {text}
         </Typography>
       </CardContent>
