@@ -14,6 +14,8 @@ const Recording = () => {
     const dispatch = useDispatch()
     const language = useContext(LanguageContext)
         // change Redux store after component renders for navbar conditional rendering
+                //conditional title for card
+     const title = language == "GER" ? "Recording" : "Recording"
     useEffect(() => {
         dispatch(changePage("recording"))
       }, []);
@@ -22,7 +24,7 @@ const Recording = () => {
         <div className="recording">
             <div className="blur">
                 <div className="recordingcontent">
-                <StulzCard theme={"dark"} alt={"Recording"} title={"Recording"} src={"./images/recording_small.jpg"} text={exampleTexts[language]}></StulzCard>
+                <StulzCard theme={"dark"} alt={"Recording"} title={title} src={"./images/recording_small.jpg"} text={exampleTexts[language]}></StulzCard>
                 </div>
             </div>
         </div>

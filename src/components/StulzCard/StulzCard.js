@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import CardActionArea from '@mui/material/CardActionArea';
+import { exampleTexts } from "../../placeholder";
 
 
 
@@ -22,8 +22,8 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
             alt={alt}
             style={{width: "50%"}}
           />
-          <CardContent sx={[{width: 0.5}]}>
-            <Typography align="left" gutterBottom variant="h5" component="div">
+          <CardContent sx={[{width: 0.5}, {padding: 3.5}]}>
+            <Typography align="left" gutterBottom variant="h3" component="div">
               {title}
             </Typography>
             <Typography align="left" variant="body2" color="text.secondary">

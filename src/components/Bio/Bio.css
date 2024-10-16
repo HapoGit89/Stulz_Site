@@ -12,19 +12,6 @@
 
 }
 
-.bioCard {
- 
-    width: 80rem;
-    height: 40vh;
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 20vh;
-    background-color: blue;
-    
-}
 .bioContent {
     height: 100vh;
     width: 100vw;
@@ -34,25 +21,6 @@
     justify-content: center;
 }
 
-.text {
-    background: #f9f9f9;
-    width: 60em;
-    height: 100%;
-    padding-left:  2%;
-    padding-right: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-
-
-.cardImage {
-    width: 40em;
-    height: auto;
-}
 
 .blur {
     height:100vh;
@@ -62,43 +30,4 @@
     overflow: auto;
 
 }
-
-.imageCard {
-    width: 80rem;
-    height: 40vh;
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-   
-
-}
-
-.boxImage {
-    width: 40em;
-    height: auto;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
-}
-
-.imageBox {
-    width: 50em;
-}
-
-
-h1 {
-    text-align: center;
-    font-weight: normal;
-}
-
-p {
-    line-height: 1.8;
-    letter-spacing: 1px;
-}
-
-
 

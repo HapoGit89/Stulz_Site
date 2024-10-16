@@ -16,8 +16,6 @@ import "./MyNavBar.css"
 import { Link } from 'react-router-dom';
 import { Link as LinkBase } from '@mui/material';
 import { useSelector, shallowEqual } from 'react-redux';
-import { createTheme } from '@mui/material';
-import { ThemeProvider } from '@mui/material';
 import LanguageChanger from '../LanguageChanger/LanguageChanger';
 import { useContext } from 'react';
 import LanguageContext from '../../languageContext';
@@ -26,16 +24,16 @@ import LanguageContext from '../../languageContext';
 // Custom Color Codes Object
 
 const stulzcolors = {
-    black: "#141414",
-    red: "#8f3422",
-    white: "#f9f9f9"
+  black: "#141414",
+  red: "#8f3422",
+  white: "#f9f9f9"
 }
 
 
 // Navbar Code from MUI modified for my needs
 
 const drawerWidth = 240;
-const navItems = ['Bio', 'Live', 'Recording', 'Kooperationen', 'Kontakt'];
+
 
 function MyNavBar(props) {
   // get page from Redux store
@@ -43,6 +41,7 @@ function MyNavBar(props) {
   const lang = useContext(LanguageContext)
   let navItems = []
 
+  // conditional initialize for navItems
   lang == "GER" ? navItems = ['Bio', 'Live', 'Recording', 'Kooperationen', 'Kontakt'] : navItems = ['About', 'Live', 'Recording', 'Endorsements', 'Contact'];
 
   const { window } = props;
@@ -89,7 +88,7 @@ function MyNavBar(props) {
 
   if (page != "video") {
     return (
-      <Box sx={{ display: 'flex', m: -1.9}}>
+      <Box sx={{ display: 'flex', m: -1.9 }}>
         <AppBar component="nav">
           <Toolbar sx={{ backgroundColor: "#141414", }}>
             <IconButton
@@ -103,18 +102,18 @@ function MyNavBar(props) {
             </IconButton>
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: "flex", lg: "flex", xl: "flex" }, justifyContent: "space-between", width: "80vw" }}>
               {navItems.map((item) => (
-                <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "white"} } underline="none">
-                  <Button key={item} sx={[{ color: stulzcolors.white }, {"&:hover": {color: "primary.main"}}]}>{item}</Button>
+                <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "white" }} underline="none">
+                  <Button key={item} sx={[{ color: stulzcolors.white }, { "&:hover": { color: "primary.main" } }]}>{item}</Button>
                 </LinkBase>
               ))
               }
-               <LinkBase  component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
-              <Button variant="outlined"  sx={[{ color: stulzcolors.white, borderColor: stulzcolors.white },{"&:hover": {color: "primary.main"}}]}>Video/Film</Button>
-            </LinkBase>
+              <LinkBase component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
+                <Button variant="outlined" sx={[{ color: stulzcolors.white, borderColor: stulzcolors.white }, { "&:hover": { color: "primary.main" } }]}>Video/Film</Button>
+              </LinkBase>
             </Box>
-            <Box sx={{ml: 7}}>
-          <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
-          </Box>
+            <Box sx={{ ml: 7 }}>
+              <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
+            </Box>
           </Toolbar>
         </AppBar>
         <nav>
@@ -139,8 +138,7 @@ function MyNavBar(props) {
     );
   }
   else return (
-
-    <Box sx={{ display: 'flex' , m: -1.9}}>
+    <Box sx={{ display: 'flex', m: -1.9 }}>
       <AppBar component="nav">
         <Toolbar sx={{ backgroundColor: "#f9f9f9", }}>
           <IconButton
@@ -155,15 +153,15 @@ function MyNavBar(props) {
           <Box sx={{ display: { xs: 'none', sm: 'flex', md: "flex", lg: "flex", xl: "flex" }, justifyContent: "space-between", width: "80vw" }}>
             {navItems.map((item) => (
               <LinkBase key={item} component={Link} to={`/${item.toLowerCase()}`} sx={{ color: "black" }} underline="none">
-                <Button key={item} sx={[{ color: "black" }, {"&:hover": {color: "primary.main"}}]}>{item}</Button>
+                <Button key={item} sx={[{ color: "black" }, { "&:hover": { color: "primary.main" } }]}>{item}</Button>
               </LinkBase>
             ))}
-              <LinkBase  component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
-              <Button variant="outlined" sx={[{ color: stulzcolors.black, borderColor: stulzcolors.black }, {"&:hover": {color: "primary.main"}}]}>Video/Film</Button>
+            <LinkBase component={Link} to={`/Video`} sx={{ color: "white" }} underline="none">
+              <Button variant="outlined" sx={[{ color: stulzcolors.black, borderColor: stulzcolors.black }, { "&:hover": { color: "primary.main" } }]}>Video/Film</Button>
             </LinkBase>
           </Box>
-            <Box sx={{ml: 7}}>
-          <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
+          <Box sx={{ ml: 7 }}>
+            <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
           </Box>
         </Toolbar>
       </AppBar>
@@ -186,17 +184,15 @@ function MyNavBar(props) {
       </nav>
       <Toolbar />
     </Box>
-   
-
   )
 }
 
-MyNavBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
+// MyNavBar.propTypes = {
+//   /**
+//    * Injected by the documentation to work in an iframe.
+//    * You won't need it on your project.
+//    */
+//   window: PropTypes.func,
+// };
 
 export default MyNavBar;
