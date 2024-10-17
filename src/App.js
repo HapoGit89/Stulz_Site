@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import LanguageContext from './languageContext';
 import { useState, useEffect } from 'react';
+import "./fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf"
 
 
 // create MUI Theme with customer colors

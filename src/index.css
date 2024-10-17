@@ -1,5 +1,12 @@
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  font-weight: bold;
+  src: url("./fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf") format("opentype");
+}
+
 body {
-  font-family: 'Brandon', sans-serif;
+  font-family: "BrandonGrotesque"
 
 }
 
@@ -9,8 +16,5 @@ code {
 }
 
 
-@font-face {
-  font-family: 'Brandon';
-  src: url('./fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf') format('otf');
-}
+
 

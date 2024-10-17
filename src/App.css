@@ -1,8 +1,18 @@
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: local("BrandonGrotesque"),
+   url("./fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf") format("otf");
+  font-weight:normal
+ }
+
 .App {
   text-align: center; 
   height: 100vh;
-  width: 100vw
+  width: 100vw;
+  font-family: 'BrandonGrotesque';
 }
+
 
 .App-logo {
   height: 40vmin;
