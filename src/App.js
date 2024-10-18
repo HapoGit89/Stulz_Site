@@ -23,6 +23,10 @@ const theme = createTheme({
     secondary: {
       main: "#141414",
       light: "#14141490"
+    },
+    info: {
+      main: "#f9f9f9",
+      light: "#f9f9f990"
     }
   },
 });

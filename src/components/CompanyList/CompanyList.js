@@ -11,7 +11,7 @@ const CompanyList = ({companies}) => {
     return (
         <>
         <div className="companylist">
-        {companies.map((c)=> (<CompanyCard alt={c.name} text={c.text} title={c.title} src={c.src}></CompanyCard>))}
+        {companies.map((c)=> (<CompanyCard alt={c.name} text={c.text} title={c.title} src={c.src} url={c.url}></CompanyCard>))}
         </div>
         </>
     )

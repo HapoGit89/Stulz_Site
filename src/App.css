@@ -1,10 +1,5 @@
 
-@font-face {
-  font-family: "BrandonGrotesque";
-  src: local("BrandonGrotesque"),
-   url("./fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf") format("otf");
-  font-weight:normal
- }
+
 
 .App {
   text-align: center; 

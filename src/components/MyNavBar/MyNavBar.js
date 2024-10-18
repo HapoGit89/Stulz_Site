@@ -19,6 +19,7 @@ import { useSelector, shallowEqual } from 'react-redux';
 import LanguageChanger from '../LanguageChanger/LanguageChanger';
 import { useContext } from 'react';
 import LanguageContext from '../../languageContext';
+import "../../fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf"
 
 
 // Custom Color Codes Object
