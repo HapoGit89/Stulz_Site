@@ -19,7 +19,7 @@ import { useSelector, shallowEqual } from 'react-redux';
 import LanguageChanger from '../LanguageChanger/LanguageChanger';
 import { useContext } from 'react';
 import LanguageContext from '../../languageContext';
-import "../../fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf"
+
 
 
 // Custom Color Codes Object
@@ -89,6 +89,7 @@ function MyNavBar(props) {
 
   if (page != "video") {
     return (
+      <div className="navbar">
       <Box sx={{ display: 'flex', m: -1.9 }}>
         <AppBar component="nav">
           <Toolbar sx={{ backgroundColor: "#141414", }}>
@@ -136,9 +137,11 @@ function MyNavBar(props) {
         </nav>
         <Toolbar />
       </Box>
+      </div>
     );
   }
   else return (
+    <div className="navbar">
     <Box sx={{ display: 'flex', m: -1.9 }}>
       <AppBar component="nav">
         <Toolbar sx={{ backgroundColor: "#f9f9f9", }}>
@@ -185,6 +188,7 @@ function MyNavBar(props) {
       </nav>
       <Toolbar />
     </Box>
+    </div>
   )
 }
 

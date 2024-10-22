@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import "./StulzCard.css"
 
 
 
@@ -25,12 +26,13 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
             <Typography align="left" gutterBottom variant="h3" component="div">
               {title}
             </Typography>
-            <Typography align="left" variant="body2" color="text.secondary">
+            <Typography align="left" variant="body" color="text.secondary">
             {text}
             </Typography>
           </CardContent>
          
         </Card>
+      
      
     )
     }
@@ -47,7 +49,7 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
         <Typography align="left" sx={{color: "#f9f9f9"}} gutterBottom variant="h3" component="div">
           {title}
         </Typography>
-        <Typography align="left" sx={{color: "#f9f9f9"}} variant="body2" color="text.secondary">
+        <Typography align="left" sx={{color: "#f9f9f9"}} variant="body1" color="text.secondary">
         {text}
         </Typography>
       </CardContent>

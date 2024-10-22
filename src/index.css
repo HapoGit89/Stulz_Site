@@ -1,15 +1,4 @@
 
-@font-face {
-  font-family: "BrandonGrotesque";
-  font-weight: bold;
-  src: url("./fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf") format("opentype");
-}
-
-body {
-  font-family: "BrandonGrotesque"
-
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

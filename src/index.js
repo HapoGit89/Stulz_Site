@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './rootReducer';
-import './fonts/BrandonGrotesque/HvDTrial_Brandon_Grotesque_regular.otf'
+
 
 // create Store and wrap app in Provider
 const store = createStore(rootReducer)
