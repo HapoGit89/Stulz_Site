@@ -26,7 +26,7 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
             <Typography align="left" gutterBottom variant="h3" component="div">
               {title}
             </Typography>
-            <Typography align="left" variant="body" color="text.secondary">
+            <Typography align="left" variant="body1" color="text.secondary">
             {text}
             </Typography>
           </CardContent>

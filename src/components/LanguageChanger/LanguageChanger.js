@@ -2,10 +2,12 @@ import { Button } from "reactstrap"
 import "./LanguageChanger.css"
 import { useContext } from "react"
 import LanguageContext from "../../languageContext"
+import { useSelector } from "react-redux"
 
 
-const LanguageChanger = ({changeLang}) => {
+const LanguageChanger = ({changeLang, page}) => {
     const lang = useContext(LanguageContext)
+     
     
     // function used in onClick triggering the changeLang func in App.js
     const setL = (lang)=> {
@@ -14,15 +16,14 @@ const LanguageChanger = ({changeLang}) => {
 
 
     if (lang == "ENG"){
-        console.log("changed")
         return (
             
             <div className="LanguageChanger">
-                <Button onClick={()=>setL("GER")}>
-                    GER
+                <Button className onClick={()=>setL("GER")}>
+                    🇩🇪
                 </Button>
                 <Button className="act" onClick={()=>setL("ENG")}>
-                   ENG
+                   🇬🇧
                 </Button>
             </div>
         )
@@ -31,10 +32,10 @@ const LanguageChanger = ({changeLang}) => {
         return (
             <div className="LanguageChanger">
                 <Button className="act" onClick={()=>setL("GER")}>
-                    GER
+                    🇩🇪
                 </Button>
                 <Button onClick={()=>setL("ENG")}>
-                   ENG
+                   🇬🇧
                 </Button>
             </div>
         )

@@ -114,7 +114,7 @@ function MyNavBar(props) {
               </LinkBase>
             </Box>
             <Box sx={{ ml: 7 }}>
-              <LanguageChanger changeLang={props.changeLang}></LanguageChanger>
+              <LanguageChanger changeLang={props.changeLang} page={page}></LanguageChanger>
             </Box>
           </Toolbar>
         </AppBar>
