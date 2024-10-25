@@ -74,8 +74,9 @@ function App() {
         <LanguageContext.Provider value={lang}>
           <MyNavBar changeLang={changeLang} ></MyNavBar>
           <Routes>
-            <Route exact path="/video" element={<VideoFil></VideoFil>}></Route>+
+            <Route exact path="/video" element={<VideoFil></VideoFil>}></Route>
             <Route exact path="/bio" element={<Bio></Bio>}></Route>
+            <Route exact path="/" element={<Bio></Bio>}></Route>
             <Route exact path="/about" element={<Bio></Bio>}></Route>
             <Route exact path="/live" element={<Live></Live>}></Route>
             <Route exact path="/recording" element={<Recording></Recording>}></Route>
