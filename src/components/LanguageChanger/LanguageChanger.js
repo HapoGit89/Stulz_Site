@@ -19,7 +19,7 @@ const LanguageChanger = ({changeLang, page}) => {
         return (
             
             <div className="LanguageChanger">
-                <Button className onClick={()=>setL("GER")}>
+                <Button onClick={()=>setL("GER")}>
                     🇩🇪
                 </Button>
                 <Button className="act" onClick={()=>setL("ENG")}>

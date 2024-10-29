@@ -1,4 +1,35 @@
 .InstaFeed {
-    width: 80vh;
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 65vw;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Thumb {
+    width: 200px;
+    height: auto;
+    max-height: 200px;
+    object-fit:cover;
+}
+
+.Kachel {
+    height: 200px;
+    width: 200px;
+    background-color: #141414;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+h1 {
+    letter-spacing: 8px;
+    color: #f9f9f999;
+    font-size: 7vh;
+    font-weight: lighter;
 }

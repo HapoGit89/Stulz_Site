@@ -2,17 +2,24 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changePage } from "../../actions";
 import StulzCard from "../StulzCard/StulzCard";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import LanguageContext from "../../languageContext";
 import './Bio.css'
+import axios from 'axios';
+import InstaFeed from "../InstaFeed/InstaFeed";
 import { exampleTexts } from "../../placeholder";
+import { InstaApi } from "../../api";
 
 
-
+// get API Key from ENV
+const API_KEY = process.env.REACT_APP_API_KEY
 
 
 
 const Bio = () => {
+    // state for holding data from Insta Api
+    const [posts, setPosts] = useState([])
+
     const language = useContext(LanguageContext)
             //conditional title for card
      const title = language == "GER" ? "Bio" : "About"
@@ -20,19 +27,29 @@ const Bio = () => {
     // change Redux store after component renders for navbar conditional rendering
     useEffect(() => {
         dispatch(changePage("bio"))
+        const getInsta = async () => {
+            const response = await InstaApi.GetPosts()
+            // format media and thumbnail links to be signed
+            if(response.data){const data = response.data.map((e)=>e.media_url.replace("\\",''))
+            data.forEach((e)=>{if(e.media_type == "VIDEO"){e.thumbnail_url.replace("\\", '')}})
+            // setState
+            setPosts(response.data)}
+        }
+        getInsta()
     }, []);
     return (
         <div className="bio">
             <div className="blur">
                 <div className="bioContent">
+                    <div className="bioCard">
                     <StulzCard theme={"dark"} title={title} src={"./images/bio_small.jpg"} text={exampleTexts[language]} alt={"Bio"}></StulzCard>
-
-                    <div class="elfsight-app-46d1ba37-b9c6-4292-8004-642f1bd8687c" data-elfsight-app-lazy>
-                    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                    </div>
+                    <div className="bioFeed">
+                        <InstaFeed data={posts}></InstaFeed></div>
                     </div>
                 </div>
             </div>
-        </div>
+    
     )
 }
 

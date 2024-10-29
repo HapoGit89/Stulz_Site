@@ -15,7 +15,7 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
     if (theme == "light"){
     return (
         
-        <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.6, height: 0.35}, {backgroundColor: "#f9f9f9"}]} >
+        <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.6, height: 0.35, minHeight: 290}, {backgroundColor: "#f9f9f9"}]} >
           <CardMedia
             component="img"
             image={src}
@@ -38,7 +38,7 @@ const StulzCard =  ({src, alt, text, title, theme}) => {
     }
   else {
     return (
-      <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.6, height: 0.35}, {backgroundColor: "#141414"}]} >
+      <Card  sx={[ {display: 'flex', flexDirection: "row"}, {width: 0.6, height: 0.35, minHeight:290}, {backgroundColor: "#141414"}]} >
       <CardMedia
         component="img"
         image={src}
