@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import LanguageContext from './languageContext';
 import { useState, useEffect } from 'react';
+import BottomLine from './components/BottomLine/BottomLine';
 import BrandonGrotesque from "./fonts/BrandonGrotesque/Brandon-Grotesque-Web-Regular.woff"
 
 
@@ -85,6 +86,7 @@ function App() {
             <Route exact path="/kontakt" element={<Kontakt></Kontakt>}></Route>
             <Route exact path="/contact" element={<Kontakt></Kontakt>}></Route>
           </Routes>
+          <BottomLine></BottomLine>
         </LanguageContext.Provider>
       </ThemeProvider>
     </div>

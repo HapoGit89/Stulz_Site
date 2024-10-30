@@ -5,7 +5,6 @@ import StulzCard from "../StulzCard/StulzCard";
 import { useContext, useState } from "react";
 import LanguageContext from "../../languageContext";
 import './Bio.css'
-import axios from 'axios';
 import InstaFeed from "../InstaFeed/InstaFeed";
 import { exampleTexts } from "../../placeholder";
 import { InstaApi } from "../../api";
