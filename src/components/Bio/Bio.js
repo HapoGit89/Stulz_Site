@@ -33,6 +33,7 @@ const Bio = () => {
             if(response.data){const data = response.data.map((e)=>e.media_url.replace("\\",''))
             data.forEach((e)=>{if(e.media_type == "VIDEO"){e.thumbnail_url.replace("\\", '')}})
             // setState
+            console.log(response.data)
             setPosts(response.data)}
         }
         getInsta()
