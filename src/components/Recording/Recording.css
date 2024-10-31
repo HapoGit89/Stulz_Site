@@ -1,7 +1,7 @@
 .recording {
     width: 100vw;
     height:100vh;
-    background: url('../../../public/images/recording.JPG');
+    background: url('../../images/recording.JPG');
     background-size: cover;
     background-position: center;
     display: flex;

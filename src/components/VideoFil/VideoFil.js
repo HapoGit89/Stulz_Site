@@ -6,6 +6,7 @@ import LanguageContext from "../../languageContext";
 import { exampleTexts } from "../../placeholder";
 import { useContext } from "react";
 import './VideoFil.css'
+import video from "../../images/video_small.JPG"
 
 
 const VideoFil = () => {
@@ -21,7 +22,7 @@ const VideoFil = () => {
         <div className="video">
             <div className="blur">
                 <div className="videocontent">
-                    <StulzCard theme={"light"} alt={"Video"} title={title} text={exampleTexts[language]} src={"./images/video_small.jpg"}></StulzCard>
+                    <StulzCard theme={"light"} alt={"Video"} title={title} text={exampleTexts[language]} src={video}></StulzCard>
 
                 </div>
             </div>

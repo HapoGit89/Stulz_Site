@@ -8,6 +8,7 @@ import './Bio.css'
 import InstaFeed from "../InstaFeed/InstaFeed";
 import { exampleTexts } from "../../placeholder";
 import { InstaApi } from "../../api";
+import bio_small from "../../images/bio_small.jpg"
 
 
 // get API Key from ENV
@@ -41,10 +42,11 @@ const Bio = () => {
             <div className="blur">
                 <div className="bioContent">
                     <div className="bioCard">
-                    <StulzCard theme={"dark"} title={title} src={"./images/bio_small.jpg"} text={exampleTexts[language]} alt={"Bio"}></StulzCard>
+                    <StulzCard theme={"dark"} title={title} src={bio_small} text={exampleTexts[language]} alt={"Bio"}></StulzCard>
                     </div>
                     <div className="bioFeed">
-                        <InstaFeed data={posts}></InstaFeed></div>
+                        <InstaFeed data={posts}></InstaFeed>
+                    </div>
                     </div>
                 </div>
             </div>

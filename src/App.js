@@ -14,6 +14,7 @@ import BottomLine from './components/BottomLine/BottomLine';
 import BrandonGrotesque from "./fonts/BrandonGrotesque/Brandon-Grotesque-Web-Regular.woff"
 
 
+
 // Global MUI Theme
 const theme = createTheme({
   palette: {

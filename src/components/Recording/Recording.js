@@ -6,6 +6,7 @@ import { exampleTexts } from "../../placeholder";
 import StulzCard from "../StulzCard/StulzCard";
 import './Recording.css'
 import LanguageContext from "../../languageContext";
+import recording from "../../images/recording_small.JPG"
 
 
 
@@ -24,7 +25,7 @@ const Recording = () => {
         <div className="recording">
             <div className="blur">
                 <div className="recordingcontent">
-                <StulzCard theme={"dark"} alt={"Recording"} title={title} src={"./images/recording_small.jpg"} text={exampleTexts[language]}></StulzCard>
+                <StulzCard theme={"dark"} alt={"Recording"} title={title} src={recording} text={exampleTexts[language]}></StulzCard>
                 </div>
             </div>
         </div>

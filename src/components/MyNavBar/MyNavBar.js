@@ -90,9 +90,9 @@ function MyNavBar(props) {
   if (page != "video") {
     return (
       <div className="navbar">
-      <Box sx={{ display: 'flex', m: -1.9 }}>
+      <Box sx={{ display: 'flex', mx: 0 }}>
         <AppBar component="nav">
-          <Toolbar sx={{ backgroundColor: "#141414", }}>
+          <Toolbar sx={{ backgroundColor: "#141414" }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"

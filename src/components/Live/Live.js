@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changePage } from "../../actions";
 import ConcertList from "../ConcertList/ConcertList";
-import './Live.css'
+
 
 
 // hard coded data for Concertlist component

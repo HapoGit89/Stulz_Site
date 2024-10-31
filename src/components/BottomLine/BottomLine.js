@@ -16,7 +16,8 @@ export default function BottomLine() {
        
         boxShadow: 1,
         minWidth: 300,
-        minHeight:50
+        maxWidth: "100%",
+        minHeight:50,
       }}>
       <BottomNavigation
         showLabels

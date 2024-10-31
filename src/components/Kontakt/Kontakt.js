@@ -6,6 +6,7 @@ import { exampleTexts } from "../../placeholder";
 import { useContext } from "react";
 import LanguageContext from "../../languageContext";
 import './Kontakt.css'
+import kontakt from "../../images/contact_small.JPG"
 
 
 
@@ -23,7 +24,7 @@ const Kontakt = () => {
         <div className="kontakt">
             <div className="blur">
             <div className="kontaktcontent">
-                <StulzCard theme={"dark"} alt={"Contact"} src={"./images/contact_small.JPG"} text={exampleTexts[language]} title={title}></StulzCard>
+                <StulzCard theme={"dark"} alt={"Contact"} src={kontakt} text={exampleTexts[language]} title={title}></StulzCard>
             </div>
             </div>
         </div>
