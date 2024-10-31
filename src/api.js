@@ -16,7 +16,7 @@ export class InstaApi {
 
 // universal request method
   static async request(endpoint, data = {}, method = "get") {
-    console.debug("API Call:", endpoint, data, method);
+    console.debug("API Call:", endpoint, data, method, API_KEY, BASE_URL);
 
     const url = `${BASE_URL}/${endpoint}`;
     const headers = {"Access-Control-Allow-Origin": "*",};
